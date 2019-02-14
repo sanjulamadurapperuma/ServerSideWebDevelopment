@@ -1,3 +1,4 @@
 <?php
-	echo "Welcome ".$user."!";
+	session_start();
+	echo "Welcome ".$_SESSION['user']."!";
 ?>
