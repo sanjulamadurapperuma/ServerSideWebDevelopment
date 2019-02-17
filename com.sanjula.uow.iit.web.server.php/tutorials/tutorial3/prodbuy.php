@@ -3,7 +3,7 @@ $pagename="A smart buy for a smart home"; //Create and populate a variable calle
 echo "<link rel=stylesheet type=text/css href=mystylesheet.css>"; //Call in stylesheet
 echo "<title>".$pagename."</title>"; //display name of the page as window title
 echo "<body>";
-include ("headfile.html"); //include header layout file
+include("headfile.html"); //include header layout file
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 //retrieve the product id passed from previous page using the GET method and the $_GET superglobal variable
 //applied to the query string u_prod_id
@@ -52,7 +52,7 @@ echo "<input type=submit value='ADD TO BASKET'></p>";
 //pass the product id to the next page basket.php as a hidden value
 echo "<input type=hidden name=h_prodid value=".$prodid.">";
 echo "</form>";}
-include ("footfile.html");
+include("footfile.html");
 echo "</body>";
 include("footfile.html"); //include head layout
 echo "</body>";

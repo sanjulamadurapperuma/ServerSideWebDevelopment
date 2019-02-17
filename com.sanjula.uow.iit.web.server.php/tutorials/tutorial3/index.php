@@ -1,10 +1,10 @@
-<?php include ("db.php"); //include db.php file to connect to DB
+<?php include("db.php"); //include db.php file to connect to DB
     $pagename="Make your home smart"; //create and populate variable called $pagename
 
     echo "<link rel=stylesheet type=text/css href=mystylesheet.css>";
     echo "<title>".$pagename."</title>";
     echo "<body>";
-    include ("headfile.html");
+    include("headfile.html");
     echo "<h4>".$pagename."</h4>";
 
     //create a $SQL variable and populate it with a SQL statement that retrieves product details
@@ -30,6 +30,6 @@
     //display product name as contained in the array
     echo "</td>"; echo "</tr>"; }
     echo "</table>";
-    include ("footfile.html");
+    include("footfile.html");
     echo "</body>";
 ?>
