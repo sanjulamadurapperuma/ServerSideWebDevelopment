@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 body
 {
-	background-image: url("tutorial3/background_img.png");
+	background-image: url("images/background_img.png");
 }
 #container
 {
@@ -26,30 +26,30 @@ body
 	background:#3d5c5c;
 	color: #ffffff;
 	font-family: Fjalla One;
-	font-size: 50;
+	font-size: 50px;
 	text-align: left;
-	width: 170;
-	height:50;
+	width: 170px;
+	height:50px;
 	padding: 10px;
 }
 
 #header h2 {
 	margin: 0;
 	color: #3d5c5c;
-	font-size: 15;
+	font-size: 15px;
 	text-align: left;
 }
 #header h3 {
 	margin: 0;
 	color: #4a8d19;
-	font-size: 14;
+	font-size: 14px;
 	text-align: right;
 }
 
 #header h4 {
 	margin: 0;
 	color: #4a8d19;
-	font-size: 14;
+	font-size: 14px;
 	text-align: right;
 }
 
@@ -86,12 +86,12 @@ body
 }
 #content h4 {
 	color:#8d194a;
-	font-size: 24;
+	font-size: 24px;
 	margin: 0 0 .5em;
 }
 #content h5 {
 	color:#194a8d;
-	font-size: 18;
+	font-size: 18px;
 	margin: 0 0 .5em;
 }
 
