@@ -9,6 +9,7 @@
     //applied to the query string u_prod_id
     //store the value in a local variable called $prodid
     $prodid=$_GET['u_prod_id'];
+    $reququantity = $_GET['u_requ_quantity'];
     //display the value of the product id, for debugging purposes
     echo "<p>Selected product Id: ".$prodid;
     //create a $SQL variable and populate it with a SQL statement that retrieves product details
@@ -35,8 +36,8 @@
     //display product name as contained in the array
     echo "</td>"; echo "</tr>";
     echo "</table>";
-    //Task 3
 
+    //Task 3
     //create form made of one text field and one button for user to enter quantity
     //the value entered in the form will be posted to the basket.php to be processed
     $arrayp['prodQuantity'];
@@ -51,6 +52,8 @@
     echo "<input type=submit value='ADD TO BASKET'></p>";
     //pass the product id to the next page basket.php as a hidden value
     echo "<input type=hidden name=h_prodid value=".$prodid.">";
+    echo "<input type=hidden name=h_reququantity value=".$reququantity.">";
+
     echo "</form>";}
     include("footfile.html");
     echo "</body>";
