@@ -1,4 +1,7 @@
 <?php
+	session_start();
+	
+
     include("db.php");
     $pagename="Smart Basket";
     //Create and populate a variable called $pagename
@@ -11,24 +14,23 @@
     echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
     //New Variables
-    $newprodid = $_POST['u_prod_id'];
-    $reququantity = $_POST['u_requ_quantity'];//TODO
+    $newprodid = $_POST['h_prodid'];
+    $reququantity = $_POST['p_quantity'];
 
-    echo "<p>Id of selected product: ".$newprodid;
-    echo "<p>Quantity of selected product: ".$reququantity;
+    
+	
+	if(isset($_POST["h_prodid"])){
+		echo "<p>Id of selected product: ".$newprodid;
+		echo "<p>Quantity of selected product: ".$reququantity;
+		//create a new cell in the basket session array. Index this cell with the new product id.
+		//Inside the cell store the required product quantity
+		$_SESSION['basket'][$newprodid]=$reququantity;
+		//echo "<p>The doc id ".$newdocid." has been ".$_SESSION['basket'][$newdocid];
+		echo "<p>1 item added to the basket";
+	} else{
+		echo "Current basket unchanged";
+	}
 
-    //display random text
-    echo "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Non consectetur a erat nam at lectus urna. Cras pulvinar mattis nunc sed
-        blandit libero volutpat sed cras. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras.
-        Nunc consequat interdum varius sit. Nam aliquam sem et tortor consequat. Magna sit amet purus gravida.
-        Non sodales neque sodales ut etiam sit. Tortor consequat id porta nibh venenatis. Ornare arcu odio ut
-        sem nulla pharetra diam. Tincidunt ornare massa eget egestas purus. Pulvinar mattis nunc sed blandit
-        libero volutpat sed. Nulla malesuada pellentesque elit eget. Varius quam quisque id diam vel quam
-        elementum pulvinar. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Vestibulum lectus
-        mauris ultrices eros in. Faucibus in ornare quam viverra. Hac habitasse platea dictumst vestibulum
-        rhoncus. Parturient montes nascetur ridiculus mus. Dui accumsan sit amet nulla facilisi morbi tempus
-        iaculis urna.";
     include("footfile.html");
     //include head layout
     echo "</body>";
